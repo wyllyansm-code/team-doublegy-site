@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Anamnese completa Team DoubleGY — Coach WILLIANS GORILA GIANT.">
+<title>ANAMNESE COMPLETA | TEAM DOUBLEGY</title>
+
+<style>
+:root{
+  --bg:#070707;
+  --card:#111;
+  --red:#d71920;
+  --gold:#f2b705;
+  --white:#f5f5f5;
+  --muted:#b7b7b7;
+  --line:#2b2b2b;
+  --max:980px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.55;
+}
+.container{width:min(92%,var(--max));margin:auto}
+a{color:inherit;text-decoration:none}
+
+.top{
+  padding:22px 0;
+  border-bottom:1px solid var(--line);
+  background:#050505;
+}
+.brand{font-weight:1000;letter-spacing:.8px;font-size:1.2rem}
+.brand span{color:var(--red)}
+.back{
+  display:inline-block;
+  margin-top:12px;
+  color:#ccc;
+  font-weight:800;
+  font-size:.85rem;
+}
+.back:hover{color:var(--gold)}
+
+main{padding:55px 0 80px}
+.eyebrow{
+  color:var(--gold);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+h1{
+  font-size:clamp(2.1rem,5vw,3.7rem);
+  line-height:1;
+  margin:8px 0 14px;
+  text-transform:uppercase;
+}
+h1 span{color:var(--red)}
+.lead{color:var(--muted);max-width:760px}
+
+.progress{
+  height:8px;
+  background:#222;
+  border-radius:20px;
+  overflow:hidden;
+  margin:28px 0 12px;
+}
+.progress-bar{
+  height:100%;
+  width:14.28%;
+  background:linear-gradient(90deg,var(--red),var(--gold));
+  transition:.25s;
+}
+.progress-label{font-size:.78rem;color:#aaa;font-weight:800}
+
+.steps{
+  display:flex;
+  gap:8px;
+  overflow:auto;
+  margin:25px 0;
+}
+.step-dot{
+  flex:1;
+  min-width:100px;
+  border:1px solid #333;
+  padding:10px;
+  border-radius:8px;
+  color:#777;
+  font-size:.75rem;
+  font-weight:900;
+  text-align:center;
+}
+.step-dot.active{
+  border-color:var(--gold);
+  color:var(--gold);
+  background:rgba(242,183,5,.06);
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:28px;
+  box-shadow:0 15px 35px rgba(0,0,0,.22);
+}
+.step-panel{display:none}
+.step-panel.active{display:block}
+.step-title{
+  margin:0 0 6px;
+  font-size:1.6rem;
+  text-transform:uppercase;
+}
+.step-desc{color:#aaa;margin:0 0 22px}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+label{
+  display:block;
+  font-weight:800;
+  font-size:.9rem;
+  margin-bottom:15px;
+}
+input,select,textarea{
+  width:100%;
+  margin-top:6px;
+  padding:13px;
+  background:#090909;
+  border:1px solid #3a3a3a;
+  border-radius:7px;
+  color:#fff;
+  font:inherit;
+}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid var(--gold);
+  outline-offset:1px;
+}
+.full{grid-column:1/-1}
+
+.nav-buttons{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:25px;
+}
+.btn{
+  border:1px solid var(--red);
+  background:var(--red);
+  color:#fff;
+  padding:14px 20px;
+  border-radius:7px;
+  font-weight:900;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.btn.gold{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:#050505;
+}
+.btn.outline{
+  background:transparent;
+  border-color:#555;
+}
+.btn:hover{filter:brightness(1.08)}
+
+.notice{
+  border-left:4px solid var(--gold);
+  background:#17130a;
+  padding:15px;
+  color:#ddd;
+  margin:15px 0;
+}
+.checkbox{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  color:#ccc;
+  font-size:.88rem;
+  font-weight:600;
+}
+.checkbox input{
+  width:auto;
+  margin-top:4px;
+}
+.send-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.small{font-size:.78rem;color:#888;margin-top:14px}
+.required{color:var(--red)}
+.copy-area{
+  display:none;
+  width:100%;
+  min-height:220px;
+  margin-top:12px;
+  padding:13px;
+  background:#090909;
+  border:1px solid var(--gold);
+  border-radius:7px;
+  color:#fff;
+  font:inherit;
+  resize:vertical;
+}
+
+@media(max-width:650px){
+  .form-grid,.send-grid{grid-template-columns:1fr}
+  .card{padding:20px}
+  .nav-buttons{flex-direction:column}
+  .nav-buttons .btn{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+  <div class="container">
+    <div class="brand">TEAM <span>DOUBLEGY</span></div>
+    <a class="back" href="/" id="backToSite">← Voltar ao site</a>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+  <div class="eyebrow">Avaliação inicial • Consultoria Online</div>
+
+  <h1>Anamnese <span>Team DoubleGY</span></h1>
+
+  <p class="lead">
+    Preencha com o máximo de detalhes possível. Essas informações ajudam o
+    Coach WILLIANS GORILA GIANT a entender seu momento atual, seu objetivo
+    e sua rotina para estruturar sua estratégia.
+  </p>
+
+  <div class="progress">
+    <div class="progress-bar" id="bar"></div>
+  </div>
+
+  <div class="progress-label" id="progressText">
+    Etapa 1 de 7 • 14% concluído
+  </div>
+
+  <div class="steps" id="steps"></div>
+
+  <form id="form" name="anamnese-team-doublegy" autocomplete="on">
+
+    <!-- 01 -->
+    <section class="step-panel active">
+      <div class="card">
+        <h2 class="step-title">01 — Dados pessoais</h2>
+        <p class="step-desc">Vamos começar conhecendo você.</p>
+
+        <div class="form-grid">
+          <label>
+            Nome completo <span class="required">*</span>
+            <input name="nome" required>
+          </label>
+
+          <label>
+            Data de nascimento <span class="required">*</span>
+            <input name="nascimento" type="text" inputmode="numeric"
+                   placeholder="DD/MM/AAAA" maxlength="10" required>
+          </label>
+
+          <label>
+            Sexo
+            <select name="sexo">
+              <option value="">Selecione</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+              <option>Outro</option>
+              <option>Prefiro não informar</option>
+            </select>
+          </label>
+
+          <label>
+            WhatsApp <span class="required">*</span>
+            <input name="whatsapp" type="tel" required>
+          </label>
+
+          <label>
+            E-mail
+            <input name="email" type="email">
+          </label>
+
+          <label>
+            Cidade
+            <input name="cidade">
+          </label>
+
+          <label>
+            Estado
+            <input name="estado">
+          </label>
+
+          <label>
+            Profissão
+            <input name="profissao">
+          </label>
+
+          <label class="full">
+            Como é sua rotina de trabalho?
+            <textarea name="trabalho"
+              placeholder="Ex.: sentado, em pé, trabalho físico, turnos, viagens etc."></textarea>
+          </label>
+        </div>
+
+        <div class="nav-buttons">
+          <span></span>
+          <button class="btn" type="button" data-next>Próxima etapa →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="step-panel">
+      <div class="card">
+        <h2 class="step-title">02 — Objetivo</h2>
+        <p class="step-desc">Defina o que você quer conquistar com a consultoria.</p>
+
+        <label>
+          Objetivo principal <span class="required">*</span>
+          <select name="objetivo" required>
+            <option value="">Selecione</option>
+            <option>Hipertrofia</option>
+            <option>Emagrecimento</option>
+            <option>Recomposição corporal</option>
+            <option>Força</option>
+            <option>Performance</option>
+            <option>Condicionamento</option>
+            <option>Outro</option>
+          </select>
+        </label>
+
+        <div class="form-grid">
+          <label>
+            Meta específica
+            <textarea name="meta" placeholder="O que você gostaria de mudar ou alcançar?"></textarea>
+          </label>
+
+          <label>
+            Prazo / período desejado
+            <textarea name="prazo" placeholder="Existe uma data ou período importante?"></textarea>
+          </label>
+        </div>
+
+        <label>
+          Como você saberá que atingiu seu objetivo?
+          <textarea name="sucesso"></textarea>
+        </label>
+
+        <label>
+          Principal motivação
+          <textarea name="motivacao" placeholder="Por que você decidiu começar agora?"></textarea>
+        </label>
+
+        <div class="nav-buttons">
+          <button class="btn outline" type="button" data-prev>← Voltar</button>
+          <button class="btn" type="button" data-next>Próxima etapa →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="step-panel">
+      <div class="card">
+        <h2 class="step-title">03 — Histórico de treinamento</h2>
+        <p class="step-desc">Quanto mais detalhes, melhor conseguimos entender seu ponto de partida.</p>
+
+        <div class="form-grid">
+          <label>Há quanto tempo pratica musculação?
+            <input name="tempo_treino">
+          </label>
+
+          <label>Quantos dias por semana treina?
+            <input name="frequencia_treino">
+          </label>
+
+          <label>Onde treina?
+            <input name="local_treino">
+          </label>
+
+          <label>Tempo médio por sessão
+            <input name="tempo_sessao">
+          </label>
+        </div>
+
+        <label>Como é seu treino atual?
+          <textarea name="treino_atual"></textarea>
+        </label>
+
+        <label>Experiência com cardio
+          <textarea name="cardio"></textarea>
+        </label>
+
+        <label>Outras modalidades esportivas
+          <textarea name="modalidades"></textarea>
+        </label>
+
+        <label>Principais exercícios e cargas que conhece
+          <textarea name="cargas"></textarea>
+        </label>
+
+        <div class="form-grid">
+          <label>Exercícios que gosta
+            <textarea name="gosta"></textarea>
+          </label>
+
+          <label>Exercícios que não gosta
+            <textarea name="nao_gosta"></textarea>
+          </label>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn outline" type="button" data-prev>← Voltar</button>
+          <button class="btn" type="button" data-next>Próxima etapa →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section class="step-panel">
+      <div class="card">
+        <h2 class="step-title">04 — Saúde e histórico</h2>
+        <p class="step-desc">Responda com transparência. Se algo não se aplicar, escreva “não”.</p>
+
+        <label>Possui alguma condição de saúde diagnosticada?
+          <textarea name="condicoes"></textarea>
+        </label>
+
+        <label>Já teve ou tem pressão alta, problema cardíaco, respiratório ou metabólico?
+          <textarea name="cardio_saude"></textarea>
+        </label>
+
+        <label>Já teve tontura, desmaio ou dor no peito durante esforço?
+          <textarea name="sintomas"></textarea>
+        </label>
+
+        <label>Cirurgias anteriores
+          <textarea name="cirurgias"></textarea>
+        </label>
+
+        <label>Lesões atuais ou anteriores
+          <textarea name="lesoes"></textarea>
+        </label>
+
+        <label>Dores ou limitações atuais
+          <textarea name="limitacoes"></textarea>
+        </label>
+
+        <label>Exercícios ou movimentos que provocam dor/desconforto
+          <textarea name="dor"></textarea>
+        </label>
+
+        <label>Medicamentos em uso
+          <textarea name="medicamentos"></textarea>
+        </label>
+
+        <label>Faz acompanhamento com médico, fisioterapeuta ou outro profissional?
+          <textarea name="acompanhamento"></textarea>
+        </label>
+
+        <div class="notice">
+          <strong>Importante:</strong>
+          informe qualquer condição, sintoma, lesão ou limitação relevante
+          antes de iniciar ou modificar seu treinamento.
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn outline" type="button" data-prev>← Voltar</button>
+          <button class="btn" type="button" data-next>Próxima etapa →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="step-panel">
+      <div class="card">
+        <h2 class="step-title">05 — Nutrição e composição</h2>
+        <p class="step-desc">Informações para entender sua alimentação e seu contexto atual.</p>
+
+        <div class="form-grid">
+          <label>Peso atual (kg)
+            <input name="peso" type="number" step="0.1">
+          </label>
+
+          <label>Altura (cm)
+            <input name="altura" type="number">
+          </label>
+
+          <label>% de gordura, se souber
+            <input name="gordura">
+          </label>
+
+          <label>Número de refeições/dia
+            <input name="refeicoes" type="number">
+          </label>
+        </div>
+
+        <label>Horários habituais das refeições
+          <textarea name="horarios_refeicoes"></textarea>
+        </label>
+
+        <label>Como é sua alimentação atualmente?
+          <textarea name="alimentacao"></textarea>
+        </label>
+
+        <label>Preferências alimentares
+          <textarea name="preferencias"></textarea>
+        </label>
+
+        <label>Restrições, alergias ou intolerâncias
+          <textarea name="restricoes"></textarea>
+        </label>
+
+        <label>Consumo aproximado de água por dia
+          <input name="agua">
+        </label>
+
+        <label>Consumo de álcool
+          <textarea name="alcool"></textarea>
+        </label>
+
+        <label>Dietas anteriores e resultados
+          <textarea name="dietas"></textarea>
+        </label>
+
+        <label>Qual sua maior dificuldade para seguir uma estratégia alimentar?
+          <textarea name="dificuldade_dieta"></textarea>
+        </label>
+
+        <div class="nav-buttons">
+          <button class="btn outline" type="button" data-prev>← Voltar</button>
+          <button class="btn" type="button" data-next>Próxima etapa →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="step-panel">
+      <div class="card">
+        <h2 class="step-title">06 — Rotina e recuperação</h2>
+        <p class="step-desc">Treinamento precisa caber na vida real.</p>
+
+        <div class="form-grid">
+          <label>Horas de sono por noite
+            <input name="sono">
+          </label>
+
+          <label>Qualidade do sono
+            <select name="qualidade_sono">
+              <option value="">Selecione</option>
+              <option>Excelente</option>
+              <option>Boa</option>
+              <option>Regular</option>
+              <option>Ruim</option>
+            </select>
+          </label>
+
+          <label>Horário habitual de dormir
+            <input name="dormir" type="time">
+          </label>
+
+          <label>Horário habitual de acordar
+            <input name="acordar" type="time">
+          </label>
+
+          <label>Nível de estresse
+            <select name="estresse">
+              <option value="">Selecione</option>
+              <option>Baixo</option>
+              <option>Moderado</option>
+              <option>Alto</option>
+              <option>Muito alto</option>
+            </select>
+          </label>
+
+          <label>Nível de atividade diária
+            <input name="atividade">
+          </label>
+        </div>
+
+        <label>Disponibilidade semanal para treinar
+          <textarea name="disponibilidade" placeholder="Dias, horários e duração possível."></textarea>
+        </label>
+
+        <label>Melhor horário para treinar
+          <textarea name="horario_treino"></textarea>
+        </label>
+
+        <label>Como é sua rotina fora da academia?
+          <textarea name="rotina"></textarea>
+        </label>
+
+        <label>O que pode dificultar sua consistência?
+          <textarea name="obstaculos"></textarea>
+        </label>
+
+        <div class="nav-buttons">
+          <button class="btn outline" type="button" data-prev>← Voltar</button>
+          <button class="btn" type="button" data-next>Próxima etapa →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="step-panel">
+      <div class="card">
+        <h2 class="step-title">07 — Avaliação e finalização</h2>
+        <p class="step-desc">Últimos dados para concluir sua avaliação inicial.</p>
+
+        <label>Medidas corporais, se disponíveis
+          <textarea name="medidas" placeholder="Cintura, braço, coxa, quadril etc."></textarea>
+        </label>
+
+        <label>Observações importantes para o Coach
+          <textarea name="observacoes"></textarea>
+        </label>
+
+        <label>
+          Fotos de avaliação
+          <input id="fotos" name="fotos" type="file" accept="image/*" multiple>
+          <span class="small">
+            Selecione uma ou mais fotos. As fotos ficam no aparelho e podem ser
+            anexadas manualmente ao WhatsApp ou ao e-mail depois que o aplicativo abrir.
+          </span>
+          <span id="photoStatus" class="small" role="status" aria-live="polite"></span>
+        </label>
+
+        <label class="checkbox">
+          <input name="declaracao" type="checkbox" required>
+          <span>
+            Declaro que as informações fornecidas são verdadeiras e completas
+            e compreendo que informações incorretas ou omitidas podem interferir
+            na análise e no planejamento.
+          </span>
+        </label>
+
+        <label class="checkbox">
+          <input name="ciencia" type="checkbox" required>
+          <span>
+            Confirmo que a consultoria não substitui avaliação, diagnóstico ou
+            tratamento médico quando estes forem necessários.
+          </span>
+        </label>
+
+        <div class="notice">
+          <strong>Quase pronto.</strong>
+          Confira os dados e escolha como deseja encaminhar sua anamnese.
+        </div>
+
+        <div class="send-grid">
+          <button class="btn" type="button" id="whatsappBtn">
+            📲 Enviar direto ao WhatsApp do Coach
+          </button>
+
+          <button class="btn gold" type="button" id="emailBtn">
+            📧 Enviar por e-mail
+          </button>
+        </div>
+
+        <p class="small">
+          WhatsApp: a conversa será aberta com a ficha preenchida para você conferir e enviar.
+          E-mail: o aplicativo de e-mail configurado no aparelho será aberto com a ficha preenchida
+          para você conferir e enviar.
+        </p>
+
+        <p id="sendStatus" class="small" role="status" aria-live="polite"></p>
+
+        <textarea id="copyArea" class="copy-area" readonly
+                  aria-label="Ficha completa para copiar"></textarea>
+
+        <div class="nav-buttons">
+          <button class="btn outline" type="button" data-prev>← Voltar</button>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+  </form>
+</div>
+</main>
+
+<script>
+(function(){
+
+  const form = document.getElementById('form');
+  const panels = Array.from(document.querySelectorAll('.step-panel'));
+  const bar = document.getElementById('bar');
+  const progressText = document.getElementById('progressText');
+  const steps = document.getElementById('steps');
+  const status = document.getElementById('sendStatus');
+  const copyArea = document.getElementById('copyArea');
+
+  let current = 0;
+
+  const stepNames = [
+    'Dados pessoais',
+    'Objetivo',
+    'Treinamento',
+    'Saúde',
+    'Nutrição',
+    'Rotina',
+    'Finalização'
+  ];
+
+  steps.innerHTML = stepNames.map(function(name,index){
+    return '<div class="step-dot '+(index === 0 ? 'active' : '')+'">'
+      + String(index + 1).padStart(2,'0')
+      + '<br>' + name + '</div>';
+  }).join('');
+
+  function update(){
+    panels.forEach(function(panel,index){
+      panel.classList.toggle('active', index === current);
+    });
+
+    const percent = Math.round(((current + 1) / panels.length) * 100);
+    bar.style.width = percent + '%';
+    progressText.textContent =
+      'Etapa ' + (current + 1) + ' de ' + panels.length +
+      ' • ' + percent + '% concluído';
+
+    document.querySelectorAll('.step-dot').forEach(function(dot,index){
+      dot.classList.toggle('active', index === current);
+    });
+
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  function validCurrent(){
+    const required = Array.from(
+      panels[current].querySelectorAll('[required]')
+    );
+
+    for(const field of required){
+      if(!field.checkValidity()){
+        field.reportValidity();
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  document.querySelectorAll('[data-next]').forEach(function(button){
+    button.addEventListener('click',function(){
+      if(validCurrent() && current < panels.length - 1){
+        current++;
+        update();
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-prev]').forEach(function(button){
+    button.addEventListener('click',function(){
+      if(current > 0){
+        current--;
+        update();
+      }
+    });
+  });
+
+  const labels = {
+    nome:'Nome completo',
+    nascimento:'Data de nascimento',
+    sexo:'Sexo',
+    whatsapp:'WhatsApp',
+    email:'E-mail',
+    cidade:'Cidade',
+    estado:'Estado',
+    profissao:'Profissão',
+    trabalho:'Rotina de trabalho',
+
+    objetivo:'Objetivo principal',
+    meta:'Meta específica',
+    prazo:'Prazo',
+    sucesso:'Critério de sucesso',
+    motivacao:'Motivação',
+
+    tempo_treino:'Tempo de musculação',
+    frequencia_treino:'Frequência semanal',
+    local_treino:'Local de treino',
+    tempo_sessao:'Tempo por sessão',
+    treino_atual:'Treino atual',
+    cardio:'Experiência com cardio',
+    modalidades:'Outras modalidades',
+    cargas:'Exercícios e cargas',
+    gosta:'Exercícios que gosta',
+    nao_gosta:'Exercícios que não gosta',
+
+    condicoes:'Condições de saúde',
+    cardio_saude:'Histórico cardiovascular/respiratório/metabólico',
+    sintomas:'Sintomas durante esforço',
+    cirurgias:'Cirurgias',
+    lesoes:'Lesões',
+    limitacoes:'Dores/limitações',
+    dor:'Movimentos com dor/desconforto',
+    medicamentos:'Medicamentos',
+    acompanhamento:'Acompanhamento profissional',
+
+    peso:'Peso atual',
+    altura:'Altura',
+    gordura:'% de gordura',
+    refeicoes:'Refeições/dia',
+    horarios_refeicoes:'Horários das refeições',
+    alimentacao:'Alimentação atual',
+    preferencias:'Preferências alimentares',
+    restricoes:'Restrições/alergias/intolerâncias',
+    agua:'Água/dia',
+    alcool:'Álcool',
+    dietas:'Dietas anteriores',
+    dificuldade_dieta:'Dificuldade alimentar',
+
+    sono:'Horas de sono',
+    qualidade_sono:'Qualidade do sono',
+    dormir:'Horário de dormir',
+    acordar:'Horário de acordar',
+    estresse:'Estresse',
+    atividade:'Atividade diária',
+    disponibilidade:'Disponibilidade para treinar',
+    horario_treino:'Melhor horário',
+    rotina:'Rotina fora da academia',
+    obstaculos:'Obstáculos à consistência',
+
+    medidas:'Medidas corporais',
+    observacoes:'Observações'
+  };
+
+  function buildText(){
+
+    const data = new FormData(form);
+
+    const sections = [
+      ['👤 01. DADOS PESSOAIS',
+        ['nome','nascimento','sexo','whatsapp','email','cidade','estado','profissao','trabalho']],
+
+      ['🎯 02. OBJETIVO',
+        ['objetivo','meta','prazo','sucesso','motivacao']],
+
+      ['🏋️ 03. HISTÓRICO DE TREINAMENTO',
+        ['tempo_treino','frequencia_treino','local_treino','tempo_sessao',
+         'treino_atual','cardio','modalidades','cargas','gosta','nao_gosta']],
+
+      ['🩺 04. SAÚDE E HISTÓRICO',
+        ['condicoes','cardio_saude','sintomas','cirurgias','lesoes',
+         'limitacoes','dor','medicamentos','acompanhamento']],
+
+      ['🍽️ 05. NUTRIÇÃO E COMPOSIÇÃO',
+        ['peso','altura','gordura','refeicoes','horarios_refeicoes',
+         'alimentacao','preferencias','restricoes','agua','alcool',
+         'dietas','dificuldade_dieta']],
+
+      ['😴 06. ROTINA E RECUPERAÇÃO',
+        ['sono','qualidade_sono','dormir','acordar','estresse','atividade',
+         'disponibilidade','horario_treino','rotina','obstaculos']],
+
+      ['📋 07. AVALIAÇÃO E FINALIZAÇÃO',
+        ['medidas','observacoes']]
+    ];
+
+    const out = [
+      '📋 ANAMNESE — TEAM DOUBLEGY',
+      'Coach WILLIANS GORILA GIANT',
+      ''
+    ];
+
+    sections.forEach(function(section){
+      const title = section[0];
+      const keys = section[1];
+      const values = [];
+
+      keys.forEach(function(key){
+        const value = data.get(key);
+
+        if(value !== null && String(value).trim() !== ''){
+          values.push(
+            (labels[key] || key) + ': ' + String(value).trim()
+          );
+        }
+      });
+
+      if(values.length){
+        out.push(
+          '━━━━━━━━━━━━━━━━━━━━',
+          title,
+          '━━━━━━━━━━━━━━━━━━━━'
+        );
+        out.push.apply(out, values);
+        out.push('');
+      }
+    });
+
+    out.push(
+      '━━━━━━━━━━━━━━━━━━━━',
+      '✅ DECLARAÇÕES',
+      '━━━━━━━━━━━━━━━━━━━━',
+      'Informações fornecidas pelo aluno confirmadas.',
+      'Ciência sobre a necessidade de avaliação profissional quando aplicável.',
+      ''
+    );
+
+    const photos = document.getElementById('fotos');
+    if(photos && photos.files && photos.files.length){
+      out.push(
+        '📸 FOTOS: ' + photos.files.length +
+        ' arquivo(s) selecionado(s). Anexar manualmente ao WhatsApp/e-mail.'
+      );
+    }else{
+      out.push('📸 FOTOS: nenhuma foto selecionada.');
+    }
+
+    return out.join('\n');
+  }
+
+  function setStatus(message){
+    if(status) status.textContent = message;
+  }
+
+  async function copyText(text){
+
+    try{
+      await navigator.clipboard.writeText(text);
+      return true;
+    }catch(error){
+
+      try{
+        copyArea.value = text;
+        copyArea.style.display = 'block';
+        copyArea.focus();
+        copyArea.select();
+        return document.execCommand('copy');
+      }catch(error2){
+        copyArea.value = text;
+        copyArea.style.display = 'block';
+        return false;
+      }
+    }
+  }
+
+  function validateFinal(){
+    if(current !== panels.length - 1){
+      setStatus('⚠️ Vá até a etapa 7 para enviar a anamnese.');
+      return false;
+    }
+
+    if(!form.reportValidity()){
+      return false;
+    }
+
+    return true;
+  }
+
+  function openWhatsApp(){
+
+    if(!validateFinal()) return;
+
+    const text =
+      'Olá, Coach WILLIANS GORILA GIANT! Preenchi minha anamnese pelo site Team DoubleGY.\n\n' +
+      buildText();
+
+    const url =
+      'https://wa.me/551135967483?text=' +
+      encodeURIComponent(text);
+
+    /*
+      A abertura acontece de forma síncrona dentro do clique do aluno.
+      Assim o navegador reconhece a ação como iniciada pelo usuário.
+    */
+    const tab = window.open(url, '_blank', 'noopener,noreferrer');
+    if(!tab){
+      window.location.assign(url);
+    }
+
+    setStatus(
+      'WhatsApp aberto. Confira a ficha e toque em Enviar.'
+    );
+  }
+
+  function openEmail(){
+
+    if(!validateFinal()) return;
+
+    const text = buildText();
+    const name =
+      form.elements.namedItem('nome')?.value.trim() || 'Novo aluno';
+
+    const subject =
+      'Anamnese Team DoubleGY - ' + name;
+
+    /*
+      Abre diretamente a composição do Gmail em nova aba.
+      O fallback mailto atende aparelhos que não conseguem abrir o Gmail web.
+    */
+    const gmail =
+      'https://mail.google.com/mail/?view=cm&fs=1&tf=1' +
+      '&to=' + encodeURIComponent('teamdoublegy@gmail.com') +
+      '&su=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(text);
+
+    const mailto =
+      'mailto:teamdoublegy@gmail.com' +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(text);
+
+    const tab = window.open(gmail, '_blank', 'noopener,noreferrer');
+    if(!tab){
+      window.location.assign(mailto);
+    }
+
+    setStatus(
+      'Gmail aberto. Confira a ficha e toque em Enviar.'
+    );
+  }
+
+  document.getElementById('whatsappBtn')
+    .addEventListener('click', openWhatsApp);
+
+  document.getElementById('emailBtn')
+    .addEventListener('click', openEmail);
+
+  const photosInput = document.getElementById('fotos');
+
+  if(photosInput){
+    photosInput.addEventListener('change',function(){
+
+      const files = Array.from(photosInput.files || []);
+      const photoStatus = document.getElementById('photoStatus');
+
+      if(!photoStatus) return;
+
+      if(!files.length){
+        photoStatus.textContent = '';
+        return;
+      }
+
+      const total =
+        files.reduce(function(sum,file){
+          return sum + file.size;
+        },0) / 1024 / 1024;
+
+      photoStatus.textContent =
+        '✅ ' + files.length +
+        ' foto(s) selecionada(s) — ' +
+        total.toFixed(1) +
+        ' MB. Anexe-as manualmente no aplicativo depois que ele abrir.';
+    });
+  }
+
+  /*
+    Fallback manual:
+    se o aparelho/navegador não tiver aplicativo de e-mail ou
+    WhatsApp configurado, a ficha continua disponível para copiar.
+  */
+  window.addEventListener('error',function(){
+    if(current === panels.length - 1){
+      copyArea.value = buildText();
+    }
+  });
+
+  update();
+
+})();
+</script>
+
+</body>
+</html>
