@@ -127,7 +127,7 @@ nav a{position:relative;padding:8px 0;transition:color .2s ease}nav a:after{cont
       <a href="#processo">COMO FUNCIONA</a>
       <a href="#planos">PLANOS</a>
       <a href="#resultados">RESULTADOS</a>
-      <a href="#anamnese" id="openAnamneseNav">ANAMNESE</a>
+      <a href="/anamnese.html" id="openAnamneseNav">ANAMNESE</a>
       <a href="#contato">CONTATO</a>
     </nav>
     <a class="btn" href="https://wa.me/551135967483?text=Ol%C3%A1%2C%20Coach%21%20%F0%9F%91%8B%F0%9F%8F%BF%0AVim%20atrav%C3%A9s%20do%20Instagram%20da%20Team%20DoubleGY%20e%20tenho%20interesse%20em%20conhecer%20a%20consultoria%20online.%0AGostaria%20de%20saber%20como%20funciona%20e%20como%20posso%20come%C3%A7ar.%20%F0%9F%92%AA%F0%9F%8F%BF" target="_blank" rel="noopener">WhatsApp</a>
@@ -145,7 +145,7 @@ nav a{position:relative;padding:8px 0;transition:color .2s ease}nav a:after{cont
       <p>Seu corpo não muda por acaso. Ele muda quando treinamento, planejamento, consistência e acompanhamento trabalham juntos.</p>
       <div class="hero-actions">
         <a class="btn" href="https://wa.me/551135967483?text=Ol%C3%A1%2C%20Coach%20WILLIANS%20GORILA%20GIANT%21%20Vim%20pelo%20site%20e%20quero%20entrar%20para%20a%20Consultoria%20Online%20Team%20DoubleGY." target="_blank" rel="noopener">Quero começar minha consultoria</a>
-        <a class="btn outline" href="#anamnese" id="openAnamnese">Preencher anamnese</a>
+        <a class="btn outline" href="/anamnese.html" id="openAnamnese">Preencher anamnese</a>
       </div>
       <div class="tags">
         <span class="tag">HIPERTROFIA</span><span class="tag">EMAGRECIMENTO</span><span class="tag">RECOMPOSIÇÃO</span><span class="tag">FORÇA</span><span class="tag">PERFORMANCE</span>
@@ -335,14 +335,8 @@ nav a{position:relative;padding:8px 0;transition:color .2s ease}nav a:after{cont
     return new TextDecoder('utf-8').decode(bytes);
   }
   const html=decodeBase64Utf8(data).replaceAll('__SITE_ORIGIN__', location.origin);
-  function openAnamnese(e){
-    if(e) e.preventDefault();
-    window.location.href = '/anamnese.html';
-  }
-  ['openAnamnese','openAnamneseNav','openAnamneseFooter'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el) el.addEventListener('click',openAnamnese);
-  });
+  // Os links da anamnese usam navegação direta para /anamnese.html.
+  // Nenhuma outra navegação ou botão do site é alterado.
 })();
 </script>
 
