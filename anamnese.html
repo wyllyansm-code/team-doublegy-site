@@ -40,9 +40,9 @@
 <div class="nav-buttons"><button class="btn outline" type="button" data-prev>← Voltar</button><button class="btn" type="button" data-next>Próxima etapa →</button></div></div></section>
 
 <section class="step-panel"><div class="card"><h2 class="step-title">06 — Rotina e recuperação</h2><p class="step-desc">Para adaptar a estratégia à sua rotina real.</p><div class="form-grid">
-<label>Horas de sono <input name="sono"></label><label>Qualidade do sono <select name="qualidade_sono"><option value="">Selecione</option><option>Excelente</option><option>Boa</option><option>Regular</option><option>Ruim</option></select></label>
-<label>Nível de estresse <select name="estresse"><option value="">Selecione</option><option>Baixo</option><option>Moderado</option><option>Alto</option><option>Muito alto</option></select></label><label>Atividade diária <input name="atividade"></label></div>
-<label>Rotina de trabalho e disponibilidade para treinar <textarea name="rotina_disponibilidade" placeholder="Dias, horários e principais características da rotina."></textarea></label>
+<label>Sono — horas e qualidade <input name="sono" placeholder="Ex.: 8 horas — excelente"></label>
+<label>Nível de estresse <select name="estresse"><option value="">Selecione</option><option>Baixo</option><option>Moderado</option><option>Alto</option><option>Muito alto</option></select></label></div>
+<label>Rotina diária e disponibilidade para treinar <textarea name="rotina_disponibilidade" placeholder="Dias, horários e principais características da rotina."></textarea></label>
 <div class="nav-buttons"><button class="btn outline" type="button" data-prev>← Voltar</button><button class="btn" type="button" data-next>Próxima etapa →</button></div></div></section>
 
 <section class="step-panel"><div class="card"><h2 class="step-title">07 — Finalização</h2><p class="step-desc">Últimas informações para concluir sua avaliação.</p>
@@ -50,7 +50,7 @@
 <label class="checkbox"><input name="declaracao" type="checkbox" required><span>Declaro que as informações fornecidas são verdadeiras e completas.</span></label>
 <label class="checkbox"><input name="ciencia" type="checkbox" required><span>Confirmo que a consultoria não substitui avaliação, diagnóstico ou tratamento médico quando necessário.</span></label>
 <div class="notice"><strong>Quase pronto.</strong> Confira os dados e envie sua anamnese pelo WhatsApp.</div>
-<div class="send-grid"><button class="btn" type="button" id="whatsappBtn">📲 Enviar direto ao WhatsApp do Coach</button></div>
+<div class="send-grid"><button class="btn" type="button" id="whatsappBtn">📲 Enviar direto ao WhatsApp do Coach</button><button class="btn gold" type="button" id="emailBtn">📧 Enviar por e-mail</button></div>
 <p class="small">As fotos de avaliação serão enviadas manualmente na conversa do WhatsApp.</p>
 <p id="sendStatus" class="small" role="status" aria-live="polite"></p><textarea id="copyArea" class="copy-area" readonly aria-label="Ficha completa para copiar"></textarea>
 <div class="nav-buttons"><button class="btn outline" type="button" data-prev>← Voltar</button><span></span></div>
@@ -102,8 +102,8 @@ cardio:'Cardio/outras atividades',lesoes_limitacoes:'Dores, lesões ou limitaç�
 saude:'Condições de saúde/medicamentos/cirurgias/acompanhamento',sintomas:'Sintomas durante esforço',
 refeicoes:'Refeições por dia',agua:'Água por dia',alimentacao:'Alimentação atual',
 preferencias_restricoes:'Preferências e restrições alimentares',suplementos:'Suplementos utilizados',
-sono:'Horas de sono',qualidade_sono:'Qualidade do sono',estresse:'Nível de estresse',
-atividade:'Atividade diária',rotina_disponibilidade:'Rotina de trabalho e disponibilidade para treinar',
+sono:'Sono — horas e qualidade',estresse:'Nível de estresse',
+rotina_disponibilidade:'Rotina diária e disponibilidade para treinar',
 observacoes:'Observações'
 };
 
@@ -114,7 +114,7 @@ function buildText(){
     ['🏋️ 03. TREINAMENTO',['tempo_treino','frequencia_treino','treino_atual','cardio','lesoes_limitacoes']],
     ['🩺 04. SAÚDE',['saude','sintomas']],
     ['🍽️ 05. ALIMENTAÇÃO',['refeicoes','agua','alimentacao','preferencias_restricoes','suplementos']],
-    ['😴 06. ROTINA E RECUPERAÇÃO',['sono','qualidade_sono','estresse','atividade','rotina_disponibilidade']],
+    ['😴 06. ROTINA E RECUPERAÇÃO',['sono','estresse','rotina_disponibilidade']],
     ['📋 07. FINALIZAÇÃO',['observacoes']]
   ];
   const out=['📋 ANAMNESE — TEAM DOUBLEGY','Coach WILLIANS GORILA GIANT',''];
@@ -128,7 +128,7 @@ function buildText(){
     }
     if(vals.length) out.push('━━━━━━━━━━━━━━━━━━━━',title,'━━━━━━━━━━━━━━━━━━━━',...vals,'');
   }
-  out.push('━━━━━━━━━━━━━━━━━━━━','✅ DECLARAÇÕES','━━━━━━━━━━━━━━━━━━━━',
+  out.push('━━━━━━━━━━━━━━━━━━━━','📧 DESTINO','━━━━━━━━━━━━━━━━━━━━','E-mail de teste: teamdoublegy@gmail.com','','━━━━━━━━━━━━━━━━━━━━','✅ DECLARAÇÕES','━━━━━━━━━━━━━━━━━━━━',
     'Informações fornecidas pelo aluno confirmadas.',
     'Ciência sobre a necessidade de avaliação profissional quando aplicável.');
   return out.join('\n');
@@ -188,6 +188,23 @@ function openWhatsApp(url){
   const tab=window.open(url,'_blank','noopener,noreferrer');
   if(!tab) window.location.href=url;
 }
+
+document.getElementById('emailBtn').addEventListener('click',()=>{
+  try{
+    if(!validateFinal()) return;
+    const text=buildText();
+    const subject='Anamnese — Team DoubleGY';
+    const body='Olá, Coach WILLIANS GORILA GIANT!\n\nSegue minha anamnese preenchida pelo site Team DoubleGY.\n\n'+text;
+    const mailto='mailto:teamdoublegy@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    setSendStatus('📧 Abrindo seu aplicativo de e-mail com a anamnese preenchida. Confira o destinatário e envie.');
+    window.location.href=mailto;
+  }catch(err){
+    console.error(err);
+    const text=buildText();
+    showCopyArea(text);
+    setSendStatus('⚠️ Não foi possível abrir o aplicativo de e-mail. A ficha completa está abaixo para copiar.');
+  }
+});
 
 document.getElementById('whatsappBtn').addEventListener('click',async()=>{
   try{
